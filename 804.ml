@@ -1,17 +1,16 @@
 module StringSet = Set.Make(String);;
 
-let char_list_of_string s = List.init (String.length s) (String.get s) in
-
-let ascii_list_of_string s = 
-    let char_list = char_list_of_string s in
-    List.fold_right (
-        fun (char : Char.t) ascii_list ->
-            Char.code char :: ascii_list
-    ) char_list []
-
-in
-
 let unique_morse_representations words =
+    let char_list_of_string s = List.init (String.length s) (String.get s) in
+
+    let ascii_list_of_string s = 
+        let char_list = char_list_of_string s in
+        List.fold_right (
+            fun (char : Char.t) ascii_list ->
+                Char.code char :: ascii_list
+        ) char_list []
+
+    in
     let morse_transformations = [".-";"-...";"-.-.";"-..";".";"..-.";"--.";"....";"..";".---";"-.-";".-..";"--";"-.";"---";".--.";"--.-";".-.";"...";"-";"..-";"...-";".--";"-..-";"-.--";"--.."] in
     let words_transformed = List.map (
         fun word -> 
