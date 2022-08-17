@@ -1,7 +1,7 @@
 module StringSet = Set.Make(String);;
+open Utils;;
 
 let unique_morse_representations words =
-    let char_list_of_string s = List.init (String.length s) (String.get s) in
 
     let ascii_list_of_string s = 
         let char_list = char_list_of_string s in

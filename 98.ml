@@ -1,9 +1,7 @@
+open Utils;;
+
 module BinaryNode = struct
-    type t = 
-        {value: int; 
-        left: t option;
-        right: t option;
-        }
+    include Utils.BinaryNode
 end
 
 let validate_binary_search_tree (root : BinaryNode.t) : bool =

@@ -4,3 +4,8 @@
  * 804: Unique Morse Code Representations
  * 387: First Unique Character in String
  * 98: Validate Binary Search Tree
+ * 20: Valid Parentheses
+
+## Compililation
+`ocamlbuild -I utils ***.native`
+`./***.native`
