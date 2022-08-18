@@ -7,6 +7,7 @@
  * 20: Valid Parentheses
  * 235: Lowest Common Ancestor of a Binary Search Tree
  * 51: N-Queens
+ * 1338: Reduce Array Size to Half
 
 ## Compililation
 `ocamlbuild -I utils ***.native`
